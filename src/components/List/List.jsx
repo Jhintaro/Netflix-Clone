@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "../axios";
+import axios from "../../axios";
 import { useEffect } from "react";
 import Poster from "../../assests/Poster.jpg";
 function List({ title, fetchUrl, isLargeRow }) {
