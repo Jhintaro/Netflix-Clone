@@ -1,12 +1,11 @@
 import './App.css'
 import List from './components/List/List'
 import requests from './requests'
+import Banner from './components/Banner/Banner'
 function App() {
   return (
     <div>
-      <h1 className='text-3xl font-bold underline'>
-        Hello World
-      </h1>
+      <Banner></Banner>
       <List title={'Trending This Week'} fetchUrl={requests.fetchTrending} isLargeRow></List>
       <List title={'Top Rated Movies'} fetchUrl={requests.fetchPopularMovies}></List>
       <List title={'Top Rated Series'} fetchUrl={requests.fetchTopRatedSeries}></List>
