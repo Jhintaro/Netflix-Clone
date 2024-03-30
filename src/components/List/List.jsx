@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "../../axios";
 import { useEffect } from "react";
 import Poster from "..//../../assests/Poster.jpg";
+// eslint-disable-next-line react/prop-types
 function List({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const base_url = "https://image.tmdp.org/t/p/original/";
@@ -27,10 +28,10 @@ function List({ title, fetchUrl, isLargeRow }) {
               " max-h-[250px] transition-transform duration-[450ms] hover:scale-[1.09]"
             }`}
             key={index}
-            //src={Poster}
-            src={`${base_url}${
-              isLargeRow ? movie.poster_path : movie?.backdrop_path
-            }`}
+            src={Poster}
+            // src={`${base_url}${
+            //   isLargeRow ? movie.poster_path : movie?.backdrop_path
+            // }`}
             alt={movie.name}
           />
         ))}
