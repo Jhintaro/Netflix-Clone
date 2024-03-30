@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "../../axios";
 import { useEffect } from "react";
-import Poster from "../../assests/Poster.jpg";
+import Poster from "..//../../assests/Poster.jpg";
 function List({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const base_url = "https://image.tmdp.org/t/p/original/";
