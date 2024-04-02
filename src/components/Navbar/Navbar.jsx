@@ -1,36 +1,16 @@
-import { useEffect, useState } from "react";
-
 function Navbar() {
-  const [show, handleShow] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        handleShow(true);
-      } else {
-        handleShow(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <div
-      className={` flex fixed top-0 p-[20px] w-full h-[30px] z-[1] justify-between ease-in transition-all duration-500 ${
-        show ? " bg-black" : ""
-      }`}
+      className={` flex fixed top-0 p-3 w-full h-16 z-10 justify-between ease-in transition-all duration-500`}
     >
       <img
-        className=" h-[30px] object-contain w-[90px] fixed left-[20px]"
-        src=""
+        className=" h-12 object-contain w-36 fixed left-[20px]"
+        src="https://www.freepnglogos.com/uploads/netflix-logo-text-emblem-31.png"
         alt="USER"
       />
       <img
-        className=" h-[30px] object-contain fixed right-[20px]"
-        src=""
+        className=" h-12 w-12 object-contain fixed right-[20px]"
+        src="https://www.freepnglogos.com/uploads/dragon-ball-png/flying-dragon-ball-z-character-transparent-background-0.png"
         alt="AVATAR"
       />
     </div>

@@ -15,13 +15,15 @@ function Banner() {
       );
     }
     fetchData();
-  })
+  });
   return (
     <header
-      className={`bg-cover bg-[url("https://image.tmdp.org/t/p/original/${movie?.backdrop_path}")] bg-center text-white object-contain h-[448px]`}
+      className={`bg-cover bg-[{url("https://image.tmdp.org/t/p/original/${movie?.backdrop_path}")}] bg-center text-white object-contain h-[448px]`}
     >
       <div className=" ml-[30px] pt-[140px] h-[190px]">
-        <h1 className=" text-5xl font-[800] pb-[0.3]">{movie?.title || movie?.name || movie?.original_name}</h1>
+        <h1 className=" text-5xl font-[800] pb-[0.3]">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
         <div>
           <BannerButton>Play</BannerButton>
           <BannerButton>My List</BannerButton>
