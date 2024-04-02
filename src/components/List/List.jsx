@@ -46,7 +46,6 @@ function List({ title, fetchUrl, isLargeRow }) {
             setTrailerUrl(urlParams.get("v"));
           } else {
             console.log("No trailer found for this movie");
-            // Display an error message to the user, or handle it as per your UI requirements
           }
         })
         .catch((error) => console.log(error));
