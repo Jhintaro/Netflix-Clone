@@ -25,14 +25,14 @@ function Banner() {
   }, []);
   return (
     <header
-      className={`relative bg-cover bg-center text-white object-contain h-[448px] mt-16`}
+      className={`relative bg-cover bg-center text-white object-contain h-[448px] mt-16 mb-2`}
       style={{ backgroundImage: `url(${base_url}${movie?.backdrop_path})` }}
     >
       <div className=" bg-transparent ml-[30px] pt-[140px] h-[190px]">
         <h1 className=" bg-transparent text-5xl font-[800] pb-[0.3]">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
-        <div className=" bg-transparent">
+        <div className=" bg-transparent m mt-1 mb-1">
           <BannerButton>Play</BannerButton>
           <BannerButton>My List</BannerButton>
         </div>
