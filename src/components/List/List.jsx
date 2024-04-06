@@ -1,14 +1,13 @@
 import { useState } from "react";
 import axios from "../../axios";
 import { useEffect } from "react";
-import Poster from "..//../../assests/Poster.jpg";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 // eslint-disable-next-line react/prop-types
-function List({ title, fetchUrl, isLargeRow }) {
+function List({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
-  const base_url = "https://image.tmdp.org/t/p/original/";
+  const base_url = "https://image.tmdb.org/t/p/original";
   useEffect(() => {
     async function fetchData() {
       try {
@@ -58,15 +57,10 @@ function List({ title, fetchUrl, isLargeRow }) {
       <div className=" flex overflow-y-hidden overflow-x-scroll p-[20px] no-scrollbar">
         {movies.map((movie) => (
           <img
-            className={`w-[100px] object-contain max-h-[150px] mr-3 transition-transform duration-[450ms] hover:scale-[1.08] && ${
-              isLargeRow &&
-              " max-h-[250px] transition-transform duration-[450ms] hover:scale-[1.09]"
+            className={`w-[100px] object-contain max-h-[1500px] mr-3 transition-transform duration-[450ms] hover:scale-[1.08] && 
             }`}
             key={movie.id}
-            src={Poster}
-            // src={`${base_url}${
-            //   isLargeRow ? movie.poster_path : movie?.backdrop_path
-            // }`}
+            src={`${base_url}${movie.poster_path || movie?.backdrop_path}`}
             alt={movie.name}
             onClick={() => handleClick(movie)}
           />
